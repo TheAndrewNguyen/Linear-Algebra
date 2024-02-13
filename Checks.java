@@ -9,6 +9,15 @@ public class Checks {
         return true; 
     }
 
+    //check if the matrix dimensions are square
+    public static Boolean check_square(Matrix a){
+        
+        //check if the rows and colulmns match up 
+        if(a.get_rows() != a.get_columns()){
+            return false; 
+        }
 
+        return true; //otherwise return true
+    }
 
 }

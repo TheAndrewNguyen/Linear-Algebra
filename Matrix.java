@@ -8,14 +8,12 @@ public class Matrix {
     private int rows; 
     private int columns; 
     private double[][] matrix; 
-    private Random rand; 
     private int max_digits; 
     
     //just create a blank matrix 
     public Matrix(){
         this.rows = 0; 
         this.columns = 0;
-        initalize_random(); 
         update_matrix();
     }
 
@@ -23,7 +21,6 @@ public class Matrix {
     public Matrix(int rows, int columns){
         this.rows = rows;
         this.columns = columns; 
-        initalize_random();
         update_matrix(); 
     }
 
@@ -32,15 +29,8 @@ public class Matrix {
         this.matrix = matrix; 
         this.rows = matrix.length; 
         this.columns = matrix[0].length; 
-        initalize_random();
     }
 
-
-    /*helper constructor methods  */
-    //initalize random variable
-    public void initalize_random(){
-        this.rand = new Random(); 
-    }
 
     //update the matrix size 
     private void update_matrix(){
@@ -133,36 +123,6 @@ public class Matrix {
         return String.format("Rows: %d Columns: %d", this.rows, this.columns); 
     }
 
-
-
-
-    /*Random matrix operations */
-    //generate a random matrix 
-    public void random_matrix(){
-
-        Scanner scan = new Scanner(System.in);
-
-        System.out.print("What is the range of random numbers do you want?: "); 
-        int max_random = scan.nextInt(); 
-
-        for(int i = 0; i < matrix.length; i++){
-            //now traverse the rows and put it in 
-            for(int j = 0; j < matrix[i].length; j++){
-                int random_num = rand.nextInt(max_random + 1); //generate random number 
-
-                matrix[i][j] = random_num; //put it in the matrix 
-                
-                //see if the max_digits is larger 
-                int digits = String.valueOf(random_num).length(); 
-                if(digits > max_digits){
-                    max_digits = digits;  
-                }
-            }
-        }
-
-
-        scan.close(); //close the scanner 
-    }
 
 
     //to string might need to refind max digits 
