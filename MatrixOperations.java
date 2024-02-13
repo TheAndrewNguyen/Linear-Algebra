@@ -3,7 +3,7 @@ public class MatrixOperations {
     //matrix add operation 
     public static Matrix add(Matrix a, Matrix b){
 
-        if(!check_same_dimensions(a, b)){
+        if(!Checks.check_same_dimensions(a, b)){
             throw new IllegalArgumentException("Matricies dimensions do not match cannot add matricies"); 
         }
 
@@ -129,16 +129,25 @@ public class MatrixOperations {
         result = scalMulti(one_over_det, result); 
 
         return result; 
+    }
+
+    //find the idenity matrix given the dimensions
+    public static Matrix idenMatrix(int rows, int columns){
         
+
+
+        return new Matrix(); 
     }
 
-    //method checks if the matrix dimensions are the same 
-    private static Boolean check_same_dimensions(Matrix a, Matrix b){
-        if(a.get_rows() != b.get_rows() || a.get_columns() != b.get_columns()){
-            return false; 
-        }
 
-        return true; 
+    //find the idenity matrix given a matrix
+    public static Matrix idenMatrix(Matrix m){
+        return new Matrix(); 
     }
+
+
+
+
+
 
 }
