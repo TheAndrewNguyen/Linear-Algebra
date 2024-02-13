@@ -52,10 +52,6 @@ public class Matrix {
         }
     }
 
-
-
-
-
     //method to edit matrix size
     public void create_matrix(){
 
