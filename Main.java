@@ -6,6 +6,8 @@ public class Main {
         Matrix test = new Matrix(2, 2); 
         test = MatrixGenerator.random_matrix(test); 
 
+
+        test = MatrixOperations.inverse(test); 
         test.print_matrix();
     }
 }
