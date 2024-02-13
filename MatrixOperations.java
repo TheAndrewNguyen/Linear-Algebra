@@ -130,24 +130,4 @@ public class MatrixOperations {
 
         return result; 
     }
-
-    //find the idenity matrix given the dimensions
-    public static Matrix idenMatrix(int rows, int columns){
-        
-
-
-        return new Matrix(); 
-    }
-
-
-    //find the idenity matrix given a matrix
-    public static Matrix idenMatrix(Matrix m){
-        return new Matrix(); 
-    }
-
-
-
-
-
-
 }

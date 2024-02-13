@@ -39,9 +39,7 @@ public class MatrixGenerator {
 
     //find the idenity matrix given the dimensions
     public static Matrix idenMatrix(int rows, int columns){
-
-
-        return new Matrix(); 
+        return new Matrix();         
     }
 
 
