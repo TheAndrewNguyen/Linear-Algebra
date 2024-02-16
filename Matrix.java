@@ -115,13 +115,13 @@ public class Matrix {
         return this.columns; 
     }
 
-    public String get_dimensions(){
-        return String.format("Rows: %d Columns: %d", this.rows, this.columns); 
+    //returns the dimension of the array in array format 
+    public int[] get_dimensions(){
+        return new int[]{this.rows, this.columns}; 
+        
     }
 
-
-
-    //to string might need to refind max digits 
+    //to string 
     public void print_matrix(){
 
         if(this.rows == 0 || this.columns == 0){
