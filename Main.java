@@ -11,6 +11,7 @@ public class Main {
         try{
             a = MatrixGenerator.idenMatrix(a); 
             a.print_matrix();
+            
         } catch (IllegalArgumentException e){
             System.out.println(e); 
         }
