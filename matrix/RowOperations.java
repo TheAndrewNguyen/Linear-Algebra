@@ -4,7 +4,7 @@ import java.util.*;
 
 public class RowOperations{
 
-    //method to swap rows in a matrix
+    //method to swap rows in a matrix r1 <--> r2
     public static Matrix swap(Matrix m, int r1, int r2){
 
 
@@ -47,7 +47,7 @@ public class RowOperations{
     }
 
 
-    //scale a row 
+    //scale a row aR
     public static Matrix scale(Matrix m, int row, int scalar){
 
         //error handing 
@@ -63,12 +63,38 @@ public class RowOperations{
 
         return m; 
     }
+    
 
-    public static void add(){
+    //row additoin function r1 + r2 --> r1 
+    public static Matrix add(Matrix a, int r1, int r2){
+        //check for errors
+        if(!isRowInRange(a, r1) || !isRowInRange(a, r2)){
+            throw new IllegalArgumentException("row not in range of matrix"); 
+        }
 
+        //perform row additon 
+        for(int i = 0; i < a.get_columns(); i++){
+            double value = a.get_cell(r1, i) + a.get_cell(r2, i); //r1 + r2 
+            a.set_cell(r1, i, value); //set row 1's values to the value | --> r1         
+        }
+        
+        return a; //return the transformed matrix
     }
 
-    public static void subtract(){
+
+    //row subtraction r1 - r2 --> r1 
+    public static Matrix subtract(Matrix a, int r1, int r2){
+        if(!isRowInRange(a, r1) || !isRowInRange(a, r2)){
+            throw new IllegalArgumentException("Matrix operation could not be preformed row not in range"); 
+        }
+        
+        //perform row subtraction 
+        for(int i = 0; i < a.get_columns(); i++){
+            double value = a.get_cell(r1, i) - a.get_cell(r2, i); //r1-r2 
+            a.set_cell(r1, i, value); //--> r1 
+        }
+
+        return a; //return adjusted matrix 
 
     }
 
