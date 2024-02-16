@@ -41,9 +41,9 @@ public class RowOperations{
     }
 
     //transposing is flipping over the diagonal if square 
-    //if not square 
-    public static void transpose(){
-
+    //if not square just put the rows 
+    public static void transpose(Matrix a){
+        
     }
 
 
