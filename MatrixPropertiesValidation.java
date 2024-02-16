@@ -26,7 +26,14 @@ public class MatrixPropertiesValidation {
         //check if the dimensions are the same 
         if(!check_same_dimensions(a, b)) return false; 
 
-        //check if the values are in corresponding cells
+        //check if the values are in corresponding cells return false if corresponding cells don't match 
+        for(int i = 0; i < a.get_rows(); i++){
+            for(int j = 0; j < a.get_columns(); j++){
+                if(a.get_cell(i, j) != b.get_cell(i, j)){
+                    return false; 
+                }
+            }
+        }
 
         return true; //end result if pass all tests 
 

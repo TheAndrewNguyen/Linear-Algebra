@@ -11,10 +11,17 @@ public class MatrixOperationValidation {
         //calcuate the idenity matrix 
         Matrix idenity = MatrixGenerator.idenMatrix(original); 
         
-        //need to write a method that validates they matricies are the same 
-            
 
-        return true; 
+        //calculate the multiplicatoin of original and inverse 
+        Matrix original_multiplied_inverse = MatrixOperations.multiplMatrix(original, inverse);  
+
+        //need to write a method that validates the identity matrix and the original matrix multipleid by the inverse are the same 
+        //if they are the same it will return true 
+        //else it will return false 
+        Boolean result = MatrixPropertiesValidation.areMatriciesEqual(idenity, original_multiplied_inverse); 
+
+        //return the result 
+        return result; 
     }
 
 
