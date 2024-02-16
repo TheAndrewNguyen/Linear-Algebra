@@ -61,7 +61,7 @@ public class MatrixGenerator {
     public static Matrix idenMatrix(Matrix m){
 
         //check if the matrix is square if not throw and error 
-        if(!MatrixValidation.check_square(m)){
+        if(!MatrixPropertiesValidation.check_square(m)){
             throw new IllegalArgumentException("Error: Matrix is not invertible b/c of the dimensions"); 
         }
 

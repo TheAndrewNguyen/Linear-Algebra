@@ -1,4 +1,4 @@
-public class MatrixValidation {
+public class MatrixPropertiesValidation {
     
     //method checks if the matrix dimensions are the same 
     public static Boolean check_same_dimensions(Matrix a, Matrix b){

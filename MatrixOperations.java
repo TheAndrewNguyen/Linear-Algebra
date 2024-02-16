@@ -3,7 +3,7 @@ public class MatrixOperations {
     //matrix add operation 
     public static Matrix add(Matrix a, Matrix b){
 
-        if(!MatrixValidation.check_same_dimensions(a, b)){
+        if(!MatrixPropertiesValidation.check_same_dimensions(a, b)){
             throw new IllegalArgumentException("Matricies dimensions do not match cannot add matricies"); 
         }
 

@@ -4,7 +4,7 @@ public class MatrixOperationValidation {
     public static Boolean validate_inverse(Matrix original, Matrix inverse){
 
         //we can first check if the dimensions match the original and the inverse 
-        if(!MatrixValidation.check_same_dimensions(original, inverse)){
+        if(!MatrixPropertiesValidation.check_same_dimensions(original, inverse)){
             return false; 
         }
 
