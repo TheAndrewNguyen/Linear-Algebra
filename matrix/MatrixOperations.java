@@ -1,3 +1,5 @@
+package matrix;
+
 public class MatrixOperations {
     
     //matrix add operation 

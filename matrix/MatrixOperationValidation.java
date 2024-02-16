@@ -1,3 +1,5 @@
+package matrix; 
+
 public class MatrixOperationValidation {
     
     //we can validate a matrix is an inverse matrix if we multiply the orignal matrix by the inverse we should get the idenity matrix

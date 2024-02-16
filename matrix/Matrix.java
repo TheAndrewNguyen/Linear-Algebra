@@ -1,5 +1,5 @@
+package matrix; 
 import java.util.*; 
-
 
 //random matrix generator
 public class Matrix {
