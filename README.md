@@ -1,4 +1,4 @@
-# Linear algebra tool
+# Linear algebra Scientific computing tool
 ## Table of contents: 
 - Description
  - class descriptions: 
