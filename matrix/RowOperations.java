@@ -4,17 +4,14 @@ import java.util.*;
 
 public class RowOperations{
 
-
-
     //method to swap rows in a matrix
     public static Matrix swap(Matrix m, int r1, int r2){
 
 
         //error handling
-        if(r1 > m.get_rows() || r1 < 0 || r2 > m.get_rows() || r2 < 0){
+        if(!isRowInRange(m, r1) || !isRowInRange(m, r2)){
             throw new IllegalArgumentException("Matrix dimensions not in bounds"); 
         }
-
 
         //queue to store temp values 
         Queue<Double> temp = new LinkedList<>();
@@ -43,13 +40,28 @@ public class RowOperations{
 
     }
 
-    //transposing is flipping over the diagonal 
+    //transposing is flipping over the diagonal if square 
+    //if not square 
     public static void transpose(){
-        
+
     }
 
-    public static void scale(){
-        
+
+    //scale a row 
+    public static Matrix scale(Matrix m, int row, int scalar){
+
+        //error handing 
+        if(!isRowInRange(m, row)){
+            throw new IllegalArgumentException("row not in range of matrix");
+        }          
+
+        //scale the row using a for loop 
+        for(int i = 0; i < m.get_rows(); i++){
+            double scaled = m.get_cell(row, i) * scalar; 
+            m.set_cell(row, i, scaled); 
+        }
+
+        return m; 
     }
 
     public static void add(){
@@ -58,6 +70,18 @@ public class RowOperations{
 
     public static void subtract(){
 
+    }
+
+
+    //check if the row is witin range 
+    private static Boolean isRowInRange(Matrix m, int row){
+
+        //if rows out of bounds return false 
+        if(row < 0 || row > m.get_rows() - 1){ //-1 because our arrays are 0-indexed 
+            return false; 
+        }
+
+        return true; //if reached here it is in bounds 
     }
 
 
