@@ -3,11 +3,16 @@
 public class Main {
     public static void main(String[] args){        
 
-        Matrix test = new Matrix(2, 2); 
-        test = MatrixGenerator.random_matrix(test); 
+        Matrix a = new Matrix(3, 3); 
+        a = MatrixGenerator.random_matrix(a); 
 
+        a.print_matrix();
 
-        test = MatrixOperations.inverse(test); 
-        test.print_matrix();
-    }
+        try{
+            a = MatrixGenerator.idenMatrix(a); 
+            a.print_matrix();
+        } catch (IllegalArgumentException e){
+            System.out.println(e); 
+        }
+    }   
 }

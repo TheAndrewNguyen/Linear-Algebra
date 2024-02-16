@@ -38,15 +38,37 @@ public class MatrixGenerator {
     }
 
     //find the idenity matrix given the dimensions
-    public static Matrix idenMatrix(int rows, int columns){
-        return new Matrix();         
+    //have to fiture out where to put the pivots 
+    public static Matrix idenMatrix(int dimensions){
+
+        //create the result matrix with the dimensions given  
+        Matrix result = new Matrix(dimensions, dimensions);
+
+        int column_count = 0; //column count to keep track of which column we are in 
+
+        //loop through the rows and place a 1 in the column_count position 
+        for(int i = 0; i < result.get_rows(); i++){
+            result.set_cell(i, column_count, 1); 
+            column_count++; 
+        }
+
+        return result;         
     }
 
 
     //find the idenity matrix given a matrix
+    //we can tack onto the previous method after confirming the dimensions
     public static Matrix idenMatrix(Matrix m){
-        return new Matrix(); 
+
+        //check if the matrix is square if not throw and error 
+        if(!MatrixValidation.check_square(m)){
+            throw new IllegalArgumentException("Error: Matrix is not invertible b/c of the dimensions"); 
+        }
+
+        //if the matrix is square we can pull any dimension either row or column to form an idenity matrix 
+        //make a call to the method that takes in a dimension to create the matrix 
+        Matrix result = idenMatrix(m.get_rows()); 
+
+        return result; //return the result  
     }
-
-
 }
