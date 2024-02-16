@@ -20,4 +20,19 @@ public class MatrixPropertiesValidation {
         return true; //otherwise return true
     }
 
+    //method compares two matricies/arrays and see if their dimensions, positions of values in cells are the same
+    public static Boolean areMatriciesEqual(Matrix a, Matrix b){
+        
+        //check if the dimensions are the same 
+        if(!check_same_dimensions(a, b)) return false; 
+
+        //check if the values are in corresponding cells
+
+        return true; //end result if pass all tests 
+
+
+    }
+
+
+
 }

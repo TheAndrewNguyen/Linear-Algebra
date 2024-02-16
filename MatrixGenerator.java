@@ -66,7 +66,7 @@ public class MatrixGenerator {
         }
 
         //if the matrix is square we can pull any dimension either row or column to form an idenity matrix 
-        //make a call to the method that takes in a dimension to create the matrix 
+        //make a call to the method that takes in a dimension to create the idenity matrix for comparisoin  
         Matrix result = idenMatrix(m.get_rows()); 
 
         return result; //return the result  
