@@ -15,6 +15,35 @@ public class MatrixGenerator {
         return a; 
     }
 
+    //random matrix no preset values 
+    public static Matrix random_matrix(){
+        
+        //set the instance stuff 
+        Scanner scan = new Scanner(System.in); 
+        Random rand = new Random(); 
+        
+        //find random rows 
+        System.out.print("Range of random rows: "); 
+        int rows = scan.nextInt();
+        rows = rand.nextInt(rows); 
+
+        //find random columns 
+        System.out.print("Range of random columns"); 
+        int columns = scan.nextInt(); 
+        columns = rand.nextInt(columns); 
+
+        //make the result matrix 
+        Matrix result = new Matrix(rows, columns); 
+
+        //pass it to the other method to put in random values 
+        result = random_matrix(result); 
+        
+
+        return result; //return the result 
+    }
+
+
+
     //generates a random matrix given the orignal matrix 
     public static Matrix random_matrix(Matrix matrix){
 
