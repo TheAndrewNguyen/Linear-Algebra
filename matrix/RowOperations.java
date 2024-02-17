@@ -95,9 +95,7 @@ public class RowOperations{
         }
 
         return a; //return adjusted matrix 
-
     }
-
 
     //check if the row is witin range 
     private static Boolean isRowInRange(Matrix m, int row){
@@ -109,6 +107,4 @@ public class RowOperations{
 
         return true; //if reached here it is in bounds 
     }
-
-
 }

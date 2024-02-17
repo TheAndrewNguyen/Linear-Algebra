@@ -89,6 +89,18 @@ public class MatrixGenerator {
     }
 
 
+
+    //reduced row echelon form 
+    public static Matrix rref(Matrix m){
+        
+        return new Matrix();
+
+    }
+    
+
+
+
+
 }
 
 
