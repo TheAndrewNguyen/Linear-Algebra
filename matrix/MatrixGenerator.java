@@ -71,6 +71,24 @@ public class MatrixGenerator {
 
         return result; //return the result  
     }
+
+
+    //transposal of a matrix  
+    public static Matrix transpose(Matrix a){   
+        
+        double[][] result = new double[a.get_columns()][a.get_rows()]; 
+        
+        //swap the rows and columns 
+        for(int i = 0; i < result.length; i++){
+            for(int j = 0; j < result[0].length; j++){
+                result[i][j] = a.get_cell(j, i); 
+            }
+        }
+
+        return new Matrix(result); //return the result in matrix form 
+    }
+
+
 }
 
 
