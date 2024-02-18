@@ -7,7 +7,6 @@ public class RowOperations{
     //method to swap rows in a matrix r1 <--> r2
     public static Matrix swap(Matrix m, int r1, int r2){
 
-
         //error handling
         if(!isRowInRange(m, r1) || !isRowInRange(m, r2)){
             throw new IllegalArgumentException("Matrix dimensions not in bounds"); 

@@ -25,12 +25,12 @@ public class MatrixGenerator {
         //find random rows 
         System.out.print("Range of random rows: "); 
         int rows = scan.nextInt();
-        rows = rand.nextInt(rows); 
+        rows = rand.nextInt(rows) + 1; //+ 1 guarentees we don't go below 0 
 
         //find random columns 
-        System.out.print("Range of random columns"); 
+        System.out.print("Range of random columns: "); 
         int columns = scan.nextInt(); 
-        columns = rand.nextInt(columns); 
+        columns = rand.nextInt(columns) + 1; //make sure the +1 guarentees we don't go below 0  
 
         //make the result matrix 
         Matrix result = new Matrix(rows, columns); 
@@ -38,6 +38,7 @@ public class MatrixGenerator {
         //pass it to the other method to put in random values 
         result = random_matrix(result); 
         
+        scan.close(); 
 
         return result; //return the result 
     }
