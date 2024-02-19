@@ -25,7 +25,4 @@ public class MatrixOperationValidation {
         //return the result 
         return result; 
     }
-
-
-
 }

@@ -11,7 +11,6 @@ public class MatrixGenerator {
                 a.set_cell(i, j, 1); 
             }
         }
-        
         return a; 
     }
 

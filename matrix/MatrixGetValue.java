@@ -10,13 +10,11 @@ public class MatrixGetValue {
             throw new IllegalArgumentException("Trace could not be calculated: Matrix is not square");
         }
 
-        int current_col = 0; //variable for current column  
         double total = 0; //keep track of the total 
 
         //loop through the matrix 
         for(int i = 0; i < a.get_rows(); i++){
-            total += a.get_cell(i, current_col); 
-            current_col++; //shift right for every row we go down to get      
+            total += a.get_cell(i, i); 
         }
 
         return total; //return the total  
